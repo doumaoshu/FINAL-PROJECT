@@ -24,7 +24,7 @@ library(tidyverse)
 
 
 ```{r load-data}
-# load your data 
+laptop <- read.csv("data/laptop_data_cleaned.csv") 
 
 
 
