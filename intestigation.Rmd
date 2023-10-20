@@ -26,7 +26,10 @@ library(tidyverse)
 ```{r load-data}
 laptop <- read.csv("data/laptop_data_cleaned.csv") 
 
-
+ggplot(data = laptop, 
+       mapping = aes(x = Price,
+                     fill = Company)) +
+  geom_histogram()
 
 
 ```
