@@ -27,9 +27,10 @@ library(tidyverse)
 laptop <- read.csv("data/laptop_data_cleaned.csv") 
 
 ggplot(data = laptop, 
-       mapping = aes(x = Price,
+       mapping = aes(y = Price,
                      fill = Company)) +
-  geom_histogram()
+  geom_histogram() +
+  facet_grid( ~Company )
 
 
 ```
