@@ -26,11 +26,36 @@ library(tidyverse)
 ```{r load-data}
 laptop <- read.csv("data/laptop_data_cleaned.csv") 
 
+# the total number of laptop of each comapny
+ggplot(data = laptop, aes(y = Company)) +
+  geom_bar()
+
+# the relationship between the company and the price 
 ggplot(data = laptop, 
        mapping = aes(y = Price,
                      fill = Company)) +
   geom_histogram() +
   facet_grid( ~Company )
+
+# the relationship between the company and the price ( boxplot ) 
+ggplot(data = laptop, 
+       mapping = aes(y = Price,
+                     fill = Company)) +
+  geom_boxplot() +
+    facet_grid( ~Company )
+
+
+
+# the relationship between the price and the RAM 
+ggplot(data = laptop, 
+       mapping = aes(y = Price,
+                     fill = Ram)) +
+  geom_histogram() +
+  facet_grid( ~Ram )
+
+
+   
+
 
 
 ```
