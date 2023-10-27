@@ -19,6 +19,13 @@ library(tidyverse)
 
 ```
 
+
+```{r}
+
+```
+
+
+
 ```{r load-data}
 laptop <- read.csv("data/laptop_data_cleaned.csv") 
 
