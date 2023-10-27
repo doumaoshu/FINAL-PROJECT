@@ -53,7 +53,15 @@ ggplot(data = laptop,
   geom_histogram() +
   facet_grid( ~Ram )
 
-
+# The market share of different systems
+ggplot(laptop, aes(
+    x = "",
+    fill = Os
+    )) +
+  geom_bar(position = "fill") +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  labs( title = "The market share of different systems" )
    
 
 
