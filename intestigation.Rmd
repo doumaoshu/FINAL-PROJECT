@@ -82,3 +82,50 @@ ggplot(laptop,
 
 
 ```
+
+```{r}
+laptop <- read.csv("data/laptop_data_cleaned.csv") 
+
+# price against Ram
+laptop %>% 
+  ggplot( aes(x = Ram , y = Price))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
+
+# price against weight
+laptop %>% 
+  ggplot( aes(x = Weight , y = Price))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
+
+# price against touchscreen
+laptop %>% 
+  ggplot( aes(x = TouchScreen , y = Price))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
+
+# price against Ips
+laptop %>% 
+  ggplot( aes(x = Ips , y = Price))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
+
+# price against Ppi
+laptop %>% 
+  ggplot( aes(x = Ppi , y = Price))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
+
+# price against HDD
+laptop %>% 
+  ggplot( aes(x = HDD , y = Price))+
+  geom_point()+
+  geom_smooth(method = "lm", se = FALSE)
+
+
+linear_reg() %>%
+  set_engine("lm") %>%
+  fit(price ~ Ram, data = laptop)
+
+```
+
