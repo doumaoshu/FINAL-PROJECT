@@ -13,7 +13,6 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r load-lib, message = FALSE}
 library(tidyverse)
-library(tidymodels)
 # Add any other libraries here
 
 
@@ -34,28 +33,9 @@ laptop <- read.csv("data/laptop_data_cleaned.csv")
 ggplot(data = laptop, aes(y = Company)) +
   geom_bar()
 
-# the relationship between the company and the price 
-ggplot(data = laptop, 
-       mapping = aes(y = Price,
-                     fill = Company)) +
-  geom_histogram() +
-  facet_grid( ~Company )
-
-# the relationship between the company and the price ( boxplot ) 
-ggplot(data = laptop, 
-       mapping = aes(y = Price,
-                     fill = Company)) +
-  geom_boxplot() +
-    facet_grid( ~Company )
-
-
-
-# the relationship between the price and the RAM 
-ggplot(data = laptop, 
-       mapping = aes(y = Price,
-                     fill = Ram)) +
-  geom_histogram() +
-  facet_grid( ~Ram )
+# the total number of laptop of each typename
+ggplot(data = laptop, aes(y = TypeName)) +
+  geom_bar()
 
 # The market share of different Os
 ggplot(laptop, aes(
@@ -66,6 +46,23 @@ ggplot(laptop, aes(
   coord_polar("y", start = 0) +
   theme_void() +
   labs( title = "The market share of different systems( Os )" )
+
+
+# the relationship between the company and the price ( boxplot ) 
+ggplot(data = laptop, 
+       mapping = aes(y = Price,
+                     fill = Company)) +
+  geom_boxplot()
+
+
+
+# the relationship between the price and the RAM 
+ggplot(data = laptop, 
+       mapping = aes(y = Price,
+                     fill = Ram)) +
+  geom_histogram() +
+  facet_grid( ~Ram )
+
 
 #
 ggplot(laptop, 
