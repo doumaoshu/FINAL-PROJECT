@@ -52,16 +52,23 @@ ggplot(laptop, aes(
 ggplot(data = laptop, 
        mapping = aes(y = Price,
                      fill = Company)) +
-  geom_boxplot()
+  geom_boxplot()+
+  labs(
+    x = "Company",
+    y = "price depending on all features",
+    title = "the relationship between the company and the price"
+  )
 
-
-
-# the relationship between the price and the RAM 
+#
 ggplot(data = laptop, 
        mapping = aes(y = Price,
-                     fill = Ram)) +
-  geom_histogram() +
-  facet_grid( ~Ram )
+                     fill = TypeName)) +
+  geom_boxplot()+
+  labs(
+    x = "typename",
+    y = "price depending on all features",
+    title = "the relationship between the typename and the price"
+  )
 
 
 #
