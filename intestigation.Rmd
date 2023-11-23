@@ -31,11 +31,13 @@ laptop <- read.csv("data/laptop_data_cleaned.csv")
 
 # the total number of laptop of each comapny
 ggplot(data = laptop, aes(y = Company)) +
-  geom_bar()
+  geom_bar() +
+  labs(title = " the sales of brands")
 
 # the total number of laptop of each typename
 ggplot(data = laptop, aes(y = TypeName)) +
-  geom_bar()
+  geom_bar() +
+  labs(title = "the sales of different types")
 
 # The market share of different Os
 ggplot(laptop, aes(

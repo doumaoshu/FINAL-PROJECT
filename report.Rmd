@@ -31,41 +31,28 @@ library(tidyverse)
 
 ## Research Question
 
-Describe your research question here. Include why this question might be of interest. 
-
+to study the situation in the computer market, the relationship between price, company, the hardware of the computer, and market share.
 
 
 
 
 ## Data
 
-Briefly describe your dataset here - include a description of the key variables you will be investigating. 
-Include a citation for your data. 
-See http://libraryguides.vu.edu.au/c.php?g=386501&p=4347840 for guidance on proper citation for datasets. 
-If you got your data off the web, make sure to state the retrieval date.
-
-
+The data used by our group is about computers, containing information on thousands of laptops, the dataset encompasses a wide range of brands, models, and configurations. Each laptop entry within the dataset offers a plethora of attributes, such as processor details, memory capacity, storage size, display characteristics, graphics capabilities, battery life, operating system, and more.
 
 
 
 
 ## Findings
 
-The write-up of your project and findings go here. 
+The data used by our group is about computers, containing information on thousands of laptops, the dataset encompasses a wide range of brands, models, and configurations. Each laptop entry within the dataset offers a plethora of attributes, such as processor details, memory capacity, storage size, display characteristics, graphics capabilities, battery life, operating system, and more. Our plan is to study the situation in the computer market, the relationship between price, company and hardware.
 
-Think of this as the text of your presentation with some extra detail to cover what there was not time to discuss in the presentation. This might include any assumptions you made when doing your analysis, any limitations of the work you have done or any ideas you have for future work. Feel free to split this section into subsections to make it easier to read. 
+First, we try to find the situation in the computer market. We use the bar chart to find the market share of each company, because it can directly display the sales data of the brand, and it is convenient to compare between different brands. Lenovo, HP and Dell are the most popular computer brand in the market, and they both sell more than 260 (289, 268 and 291 respectively). Toshiba, MSI, ASUS, Acer are also popular, and their sales are spread between 50 and 150. The rest of the brands sell very little, and some brands have sales that are almost equal to zero. And then, we use the same way to find the market share of different types of computers. Notebook is the most popular type of computer, with 706 recorded, which is more than the sum of the sales of the remaining categories. Gaming, Ultrabook and 2 in 1 convertible are also bought by many people, with sales of 205, 194 and 116 respectively. We use the pie chart to find the market share of different system (Os), as the pie chart is a simple and intuitive type of chart that shows the proportional relationships between parts in a relatively simple dataset . Not surprisingly, Windows is the most common operating system, with 1100 (86.4%) recorded. There are only 21 computer (1.6%) use the Mac Os, and remain 11.9% computers are using other system.
 
-The length should be roughly 1,500 words. 
-If you want to use a word count addin, you can install this by copying and pasting the following into RStudio:
 
-`devtools::install_github("benmarwick/wordcountaddin", type = "source", dependencies = TRUE)`
+And then, we try to find the relationship between price, company, and type of computers. We made two box plots, one plot is about the price depending on all features of each company, and the other plot is about the relationship between the price and the type of the computer. In all brands, Razer had the highest average price depending on all features, with 12 recorded. Most of Razer’s product is more expensive than other companies. Mediacom, Chuwi and Vero are the three companies which had the lowest price depending on all features, all of their items are lower than 10. And the price depending on the feature of the remain companies are in the range from 10 to 11.5. There are 9 companies have a long box which is longer than 0.5: Acer, Apple, Asus, Dell, HP, Lenovo, Microsoft, MSI, Razer. These company who has a long box means that they offer customers a wider range of choices, and they are more popular and more influential in the market. On the other plot, we also find some interesting information about the price and type. Workstation had the shortest box and the average price ranked first in the six types. The network is stand out as it had the longest box: although it had the lowest average price, but some of netbook is still higher than other types.
 
-You will then need to restart RStudio. Once you have done that, select the text you want to count the words of, go to Addins, and select the `Word count` addin.
-This addin counts words using two different algorithms, but the results should be similar and as long as you're in the ballpark of 1,500 words, you're good! 
-The addin will ignore code chunks and only count the words in prose. If you don't want to use the addin you can always copy and paste the text into Microsoft Word to do a Word Count!
 
-You can also load your data here and present any analysis results / plots.
-Make sure to hide your code with  `echo = FALSE` unless the point you are trying to make is about the code itself, in which case you should show your code.
 
 
 
