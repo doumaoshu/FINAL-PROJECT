@@ -132,7 +132,7 @@ laptop %>%
 
 linear_reg() %>%
   set_engine("lm") %>%
-  fit(Price ~ Ram + Weight + TouchScreen + Ips + Ppi + HDD, data = laptop1)
+  fit(Price ~ Ram + Weight + TouchScreen + Ips + Ppi + HDD, data = laptop)
 
 ```
 
