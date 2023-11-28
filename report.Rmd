@@ -31,14 +31,14 @@ library(tidyverse)
 
 ## Research Question
 
-to study the situation in the computer market, the relationship between price, company, the hardware of the computer, and market share.
+To study the computer market and understand the relationship between price, company dynamics, computer hardware, and market share, it is essential to follow a systematic approach.
 
 
 
 
 ## Data
 
-The data used by our group is about computers, containing information on thousands of laptops, the dataset encompasses a wide range of brands, models, and configurations. Each laptop entry within the dataset offers a plethora of attributes, such as processor details, memory capacity, storage size, display characteristics, graphics capabilities, battery life, operating system, and more.
+The data used by our group is about computers and includes information on thousands of laptops. The datase t provides a wide range of brands, models, and configurations. Each laptop entry within the dataset provides a plethora of specifications, such as processor details, memory capacity, storage size, display characteristics, graphics capabilities, battery life, operating system, and more.
 
 
 
@@ -58,8 +58,6 @@ Within the realm of all brands, Razer emerges as the highest average price acros
 Furthermore, looking into the boxplots, nine companies, namely Acer, Apple, Asus, Dell, HP, Lenovo, Microsoft, MSI, and Razer, feature elongated boxes, each surpassing a length of 0.5. This extended box length signifies that these companies present customers with a diverse array of choices, reinforcing their popularity and influence within the market. The extended range suggests that these companies cater to a broad spectrum of consumer preferences, enhancing their market appeal.
 
 Moving on to the second box plot, a noteworthy pattern emerges regarding the relationship between price and the type of computers. Workstations exhibit the shortest box, but claim the top spot for the highest average price among the six models. This implies that, in average, workstations command a premium in the market due to their specialized features and capabilities. However, the "network" category stands out with the longest box. Despite boasting the lowest average price, the extended box length indicates a wide variability in netbook prices. Some netbooks within this category surpass the prices of other types, highlighting the pricing dynamics within the market.
-
-As for the final chart, this boxplot shows the weight distribution, central trend, shape of the data, and weight distribution of laptops in various categories (Workstation, Ultrabook, Notebook, Netbook, Gaming, 2 in 1 Convertible). Identification of outliers size of data sets. The shape of the data is exceptional. In each product, the maximum value is determined by three quarters. The boxplot determines the minimum value by one quarter, and the average value is the vertical line in the middle. Gaming and Workstation have the widest weight distribution, from 2.8kg to 3.6kg and 2kg-3kg, while Netbooks have the most concentrated weight distribution in the 1kg-1.5kg middle. Based on the average weight, Netbooks and Ultrabooks are too light, while Gaming and Workstation laptops are too heavy. Outliers, which are mainly found in Notebooks, require additional attention. Further analysis is needed to determine whether these outliers result from data quality issues or are characteristic of the investigated product. Some insights can be gained by looking at the distribution of different laptop weights.
 
 
 
