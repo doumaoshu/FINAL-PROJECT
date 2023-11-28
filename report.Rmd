@@ -59,7 +59,11 @@ Furthermore, looking into the boxplots, nine companies, namely Acer, Apple, Asus
 
 Moving on to the second box plot, a noteworthy pattern emerges regarding the relationship between price and the type of computers. Workstations exhibit the shortest box, but claim the top spot for the highest average price among the six models. This implies that, in average, workstations command a premium in the market due to their specialized features and capabilities. However, the "network" category stands out with the longest box. Despite boasting the lowest average price, the extended box length indicates a wide variability in netbook prices. Some netbooks within this category surpass the prices of other types, highlighting the pricing dynamics within the market.
 
+For the final chart, this box plot illustrates the weight distribution, central tendency, shape of the data, and weight variability among laptops in various categories (Workstation, Ultrabook, Notebook, Netbook, Gaming, 2 in 1 Convertible). It aids in identifying outliers and assessing the size of data sets. The shape of the data is exceptional.
 
+In each product category, the maximum value is determined by the third quartile, while the boxplot identifies the minimum value by the first quartile, and the average value is represented by the vertical line in the middle. Gaming  laptops and Workstation exhibit the widest weight distribution, ranging from 2.8kg to 3.6kg and 2kg to 3kg, respectively. In contrast, Netbooks demonstrate the most concentrated weight distribution in the 1kg to 1.5kg range.
+
+Based on average weight, Netbooks and Ultrabooks appear relatively light, while Gaming and Workstation laptops are comparatively heavy. Outliers, especially found in Notebooks, need additional attention. Further analysis is essential to determine whether these outliers result from data quality issues or are characteristic of the investigated product. Insights can be gleaned by examining the distribution of different laptop weights.
 
 
 
