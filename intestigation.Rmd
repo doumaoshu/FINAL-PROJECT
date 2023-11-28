@@ -84,6 +84,23 @@ ggplot(laptop,
     x = "Weight",
     y = "TYpe Name",
     title = "The Weight of Different laptop")
+
+#count of different Cpu
+ggplot(data = laptop, aes(y =Cpu_brand)) +
+  geom_bar() +
+  labs(title = " the sales of Cpu")
+ggplot(laptop, aes(x = "", fill = Cpu_brand)) +
+  geom_bar(position = "fill")+
+  coord_polar("y", start = 0)+
+  theme_void()
+#relation ship between the Cpu and Price
+ggplot(data = laptop,
+       mapping = aes(y = Price,
+                     fill = Cpu_brand))+
+   geom_histogram()+
+  facet_grid(~Cpu_brand)
+    
+
    
 
 
