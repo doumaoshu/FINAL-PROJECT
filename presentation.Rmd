@@ -40,17 +40,37 @@ knitr::opts_chunk$set(fig.retina = 3, dpi = 300, fig.width = 6, fig.asp = 0.618,
 
 ```{r load-data, include=FALSE}
 # Load your data here
-
+laptop <- read.csv("data/laptop_data_cleaned.csv") 
 ```
 
 ```{r include=FALSE}
-
 #Background image
 style_xaringan(
   title_slide_background_image = "img/confetti.jpg"
 )
 ```
+---
+class: inverse, center, middle
 
+#Data
+---
+
+-The data used by our group is about computers and includes information on thousands of laptops. This dataset features laptops from multiple brands and models with different configurations and characteristics.
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+print(laptop)
+```
+---
+class: inverse, center, middle
+
+#Market Share
+---
+- The sales of brands
+```{r include=FALSE}
+ggplot(data = laptop, aes(y = Company)) +
+  geom_bar() +
+  labs(title = " the sales of brands")
+```
+---
 class: center, middle
 
 ## A statement of the overall goal / research question
@@ -109,9 +129,7 @@ or text in two columns $^*$
 
 ---
 
-# Code
-
-```{r boring-regression}
+# Code```{r boring-regression}
 # a boring regression
 model <- lm(dist ~ speed, data = cars)
 tidy(model)
