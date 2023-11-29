@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r load-lib, message = FALSE}
 library(tidyverse)
+library(tidymodels)
 # Add any other libraries here
 
 
@@ -116,23 +117,18 @@ laptop %>%
   geom_point()+
   geom_smooth(method = "lm", se = FALSE)
 
-# price against weight
-laptop %>% 
-  ggplot( aes(x = Weight , y = Price))+
-  geom_point()+
-  geom_smooth(method = "lm", se = FALSE)
 
 # price against touchscreen
 laptop %>% 
   ggplot( aes(x = TouchScreen , y = Price))+
   geom_point()+
-  geom_smooth(method = "lm", se = FALSE)
+  geom_smooth(method = "glm", se = FALSE)
 
 # price against Ips
 laptop %>% 
   ggplot( aes(x = Ips , y = Price))+
   geom_point()+
-  geom_smooth(method = "lm", se = FALSE)
+  geom_smooth(method = "glm", se = FALSE)
 
 # price against Ppi
 laptop %>% 
@@ -149,7 +145,8 @@ laptop %>%
 
 linear_reg() %>%
   set_engine("lm") %>%
-  fit(Price ~ Ram + Weight + TouchScreen + Ips + Ppi + HDD, data = laptop)
+  fit(Price ~ Ram + Weight + TouchScreen + Ips + Ppi + HDD, data = laptop) %>% 
+  tidy
 
 ```
 
