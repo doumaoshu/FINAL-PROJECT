@@ -63,13 +63,42 @@ print(laptop)
 ---
 class: inverse, center, middle
 
-#Market Share
+# Goal
+---
+class: center, middle
+
+- Study the laptop market
+- The price gap between different brands and different kinds of notebooks
+- The impact of different hardware on the device price
+
+
+---
+class: inverse, center, middle
+
+#Study the laptop market
 ---
 ```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
 ggplot(data = laptop, aes(y = Company)) +
   geom_bar() +
   labs(title = " the sales of brands")+
   theme(axis.text = element_text(size = 7))
+```
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+ggplot(data = laptop, aes(y = TypeName)) +
+  geom_bar() +
+  labs(title = "the sales of different types")
+```
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+ggplot(laptop, aes(
+    x = "",
+    fill = Os
+    )) +
+  geom_bar(position = "fill") +
+  coord_polar("y", start = 0) +
+  theme_void() +
+  labs( title = "The market share of different systems( Os )" )
 ```
 ---
 class: center, middle
