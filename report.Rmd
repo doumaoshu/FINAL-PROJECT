@@ -38,6 +38,10 @@ To study the computer market and understand the relationship between price, comp
 
 ## Data
 
+The data used by our group links to computers, encompassing information on thousands of laptops. The dataset provides a wide range of brands, models, and configurations. Each laptop entry within the dataset provides several specifications, such as processor details, memory capacity, storage size, display characteristics, graphics capabilities, battery life, operating system, and more.
+
+## Finding
+
 The data used by our group is about computers and includes information on thousands of laptops. This dataset features laptops from multiple brands and models with different configurations and characteristics. Each entry in the dataset offers detailed attributes on its processor details, memory capacity, storage size, width ratio, display characteristics, graphic capabilities, battery life, operating system as well as battery life information. Our plan is to conduct an in-depth examination of the computer market by studying its relationship between price, company and hardware.
 
 First we attempt to analyze its state with the use of bar charts as visual aids. Market information of each company can be easily assessed as it displays sales data for all brands in direct comparisons with each other. Lenovo, HP and Dell stand out as being popular computer brands on the market with each selling over 260 units (Lenovo: 289; HP: 268, Dell: 269). Toshiba, MSI, ASUS and Acer brands also command significant market presence with sales between 50 to 150. In contrast, other brands experience much smaller volumes, some even approaching zero.
@@ -85,7 +89,7 @@ The next chart illustrates the impact of having or lacking an IPS display on pri
 primary price differentiators. 
 
 Finally, a chart on the relationship between PPI and price demonstrates a clear trend: laptops with higher resolution screens tend to be pricier. We can observe as PPI increases so do prices, especially from 200-300 where prices jump significantly (from approximately 10-12). This highlights market demand and willingness to pay extra for high definition displays. After reviewing these data points, our conclusion is that while storage capacity and touchscreens 
-no longer play such an essential role in laptop pricing strategies, performance-related specs such as RAM and high-resolution displays remain key price drivers. An increase in weight may reflect additional features or functionality within a laptop but its impact is relatively minor on price. 
+no longer play such an essential role in laptop pricing strategies, performance-related specs such as RAM and high-resolution displays remain key price drivers. An increase in weight may reflect additional features or functionality within a laptop but its impact is relatively minor on price.
 
 
 
