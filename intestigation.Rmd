@@ -13,6 +13,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r load-lib, message = FALSE}
 library(tidyverse)
+library(tidymodels)
 # Add any other libraries here
 
 
@@ -48,6 +49,13 @@ ggplot(laptop, aes(
   coord_polar("y", start = 0) +
   theme_void() +
   labs( title = "The market share of different systems( Os )" )
+
+laptop_Os <- laptop$Os %>%
+  table() %>%
+   as.data.frame()
+laptop_Os$percentage <- laptop_Os$Freq / sum(laptop_Os$Freq) * 100
+print(laptop_Os)
+
 
 
 # the relationship between the company and the price ( boxplot ) 
@@ -89,10 +97,19 @@ ggplot(laptop,
 ggplot(data = laptop, aes(y =Cpu_brand)) +
   geom_bar() +
   labs(title = " the sales of Cpu")
+
 ggplot(laptop, aes(x = "", fill = Cpu_brand)) +
   geom_bar(position = "fill")+
   coord_polar("y", start = 0)+
   theme_void()
+
+laptop_Cpu_brand <- laptop$Cpu_brand %>%
+  table() %>%
+  as.data.frame()
+laptop_Cpu_brand$percentage <- laptop_Cpu_brand$Freq / sum(laptop_Cpu_brand$Freq) * 100
+print(laptop_Cpu_brand)
+
+
 #relationship between the Cpu and Price
 ggplot(data = laptop,
        mapping = aes(y = Price,
@@ -113,12 +130,6 @@ laptop <- read.csv("data/laptop_data_cleaned.csv")
 # price against Ram
 laptop %>% 
   ggplot( aes(x = Ram , y = Price))+
-  geom_point()+
-  geom_smooth(method = "lm", se = FALSE)
-
-# price against weight
-laptop %>% 
-  ggplot( aes(x = Weight , y = Price))+
   geom_point()+
   geom_smooth(method = "lm", se = FALSE)
 
@@ -149,7 +160,8 @@ laptop %>%
 
 linear_reg() %>%
   set_engine("lm") %>%
-  fit(Price ~ Ram + Weight + TouchScreen + Ips + Ppi + HDD, data = laptop)
+  fit(Price ~ Ram + Weight + TouchScreen + Ips + Ppi + HDD, data = laptop)%>%
+  tidy()
 
 ```
 
