@@ -165,17 +165,7 @@ include_graphics("img/company-and-price.jpg")
 ```
 ---
 ```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
-ggplot(data = laptop, 
-       mapping = aes(y = Price,
-                     fill = TypeName)) +
-  geom_boxplot()+
-  labs(
-    x = "typename",
-    y = "price depending on all features",
-    title = "The price gap between different kinds of laptop")+
-  theme(axis.text = element_text(size = 10),
-        axis.title = element_text(size = 7),
-        plot.title = element_text(size = 10))
+include_graphics("img/type-price.jpg")
 
 ```
 ---

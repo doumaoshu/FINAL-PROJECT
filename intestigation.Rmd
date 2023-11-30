@@ -66,8 +66,9 @@ ggplot(data = laptop,
   labs(
     x = "Company",
     y = "price depending on all features",
-    title = "The price gap between different brands"
-  )
+    title = "The price between different brands"
+  )+
+  theme(axis.text.x = element_blank())
 
 #
 ggplot(data = laptop, 
@@ -77,8 +78,9 @@ ggplot(data = laptop,
   labs(
     x = "typename",
     y = "price depending on all features",
-    title = "the relationship between the typename and the price"
-  )
+    title = "the price between different types"
+  )+
+  theme(axis.text.x = element_blank())
 
 
 #
