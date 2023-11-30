@@ -1,5 +1,5 @@
 ---
-title: "Project title"
+title: "The Study of the Situation in the Computer Market"
 author: "by Team-26: Shengpeng Qu, Kai Cui, Haipeng Sun, Leo Shen & Leyuan Wen"
 date: "`r Sys.Date()`"
 output: html_document
