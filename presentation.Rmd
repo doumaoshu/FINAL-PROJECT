@@ -65,10 +65,18 @@ class: inverse, center, middle
 
 # Goal
 ---
-class: center, middle
+# Goal
+
+--
 
 - Study the laptop market
+
+--
+
 - The price gap between different brands and different kinds of notebooks
+
+--
+
 - The impact of different hardware on the device price
 
 
@@ -90,6 +98,9 @@ ggplot(data = laptop, aes(y = TypeName)) +
   labs(title = "the sales of different types")
 ```
 ---
+class: center, middle
+
+.pull-left[
 ```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
 ggplot(laptop, aes(
     x = "",
@@ -100,6 +111,103 @@ ggplot(laptop, aes(
   theme_void() +
   labs( title = "The market share of different systems( Os )" )
 ```
+]
+.pull-right[
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+laptop_Os <- laptop$Os %>%
+  table() %>%
+   as.data.frame()
+laptop_Os$percentage <- laptop_Os$Freq / sum(laptop_Os$Freq) * 100
+print(laptop_Os)
+```
+]
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+ggplot(data = laptop, aes(y =Cpu_brand)) +
+  geom_bar() +
+  labs(title = " the sales of Cpu")
+```
+---
+class: inverse, center, middle
+
+#The price gap between different brands and different kinds of notebooks
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+ggplot(data = laptop, 
+       mapping = aes(y = Price,
+                     fill = Company)) +
+  geom_boxplot()+
+  labs(
+    x = "Company",
+    y = "price depending on all features",
+    title = "the relationship between the company and the price"
+  )
+```
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+ggplot(data = laptop, 
+       mapping = aes(y = Price,
+                     fill = TypeName)) +
+  geom_boxplot()+
+  labs(
+    x = "typename",
+    y = "price depending on all features",
+    title = "the relationship between the typename and the price"
+  )
+```
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+ggplot(data = laptop, aes(y =Cpu_brand)) +
+  geom_bar() +
+  labs(title = " the sales of Cpu")
+```
+---
+class: center, middle
+
+.pull-left[
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+ggplot(laptop, aes(x = "", fill = Cpu_brand)) +
+  geom_bar(position = "fill")+
+  coord_polar("y", start = 0)+
+  theme_void()
+
+laptop_Cpu_brand <- laptop$Cpu_brand %>%
+  table() %>%
+  as.data.frame()
+laptop_Cpu_brand$percentage <- laptop_Cpu_brand$Freq / sum(laptop_Cpu_brand$Freq) * 100
+print(laptop_Os)
+```
+]
+.pull-right[
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+laptop_Cpu_brand <- laptop$Cpu_brand %>%
+  table() %>%
+  as.data.frame()
+laptop_Cpu_brand$percentage <- laptop_Cpu_brand$Freq / sum(laptop_Cpu_brand$Freq) * 100
+print(laptop_Os)
+```
+
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+ggplot(data = laptop,
+       mapping = aes(y = Price,
+                     fill = Cpu_brand))+
+   geom_histogram()+
+  facet_grid(~Cpu_brand)
+```
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+
+```
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+
+```
+---
+```{r warning=FALSE, out.width="100%", fig.width=4, echo=FALSE}
+
+```
+
 ---
 class: center, middle
 
