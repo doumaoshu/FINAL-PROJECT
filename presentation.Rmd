@@ -1,6 +1,6 @@
 ---
 title: "The Study of the Situation in the Computer Market"
-subtitle: "focusing on the relationship between price, amrket share, company, and hardware"
+subtitle: "focusing on the relationship between price, market share, company, and hardware"
 author: "Team name <26> Shengpeng Qu, Kai Cui, Haipeng Sun, Leo Shen & Leyuan Wen"
 institute: "University of Edinburgh"
 date: "`r Sys.Date()`"
